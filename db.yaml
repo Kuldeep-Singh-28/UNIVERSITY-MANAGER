@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-mysql_host: 'localhost'
-mysql_user: 'root'
-# Enter your password in field below
-mysql_password: ''
-mysql_db: 'test'
-=======
 mysql_host: 'us-cdbr-east-02.cleardb.com'
 mysql_user: 'bfb473f32eb92e'
 # Enter your password in field below
-mysql_password: '52401634'
+mysql_password: ''  # Password is hidden
 mysql_db: 'heroku_247b94d4a9250d7'
->>>>>>> 5e699f6... Updated Files
