@@ -10,18 +10,48 @@ import models.student_krish as student_krish
 import models.admin_krish as admin_krish
 import models.faculty_r as faculty_r
 import models.course_krish as course_krish
+import os
 
 app = Flask(__name__)
 CORS(app)
 app.secret_key = "abc"
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 
+DATABASE_URL  = os.environ.get("CLEARDB_DATABASE_URL")
+
+col = []
+for i in range(len(DATABASE_URL)):
+    if(DATABASE_URL[i] == ':'):
+        col.append(i)
+
+user = DATABASE_URL[col[0]+3 : col[1]]
+at = 0
+ques = 0
+for i in range(len(DATABASE_URL)):
+    if(DATABASE_URL[i] == '@'):
+        at = i
+        break
+password = DATABASE_URL[col[1]+1 : at]
+
+slash = []
+
+for i in range(len(DATABASE_URL)):
+    if(DATABASE_URL[i] == '/'):
+        slash.append(i)
+
+host = DATABASE_URL[at+1 : slash[2]]
+
+
+for i in range(len(DATABASE_URL)):
+    if(DATABASE_URL[i] == '?'):
+        ques = i
+
+db = DATABASE_URL[slash[2]+1 : ques]
 # Configure db
-db = yaml.load(open('db.yaml'))
-app.config['MYSQL_HOST'] = db['mysql_host']
-app.config['MYSQL_USER'] = db['mysql_user']
-app.config['MYSQL_PASSWORD'] = db['mysql_password']
-app.config['MYSQL_DB'] = db['mysql_db']
+app.config['MYSQL_HOST'] = host
+app.config['MYSQL_USER'] = user
+app.config['MYSQL_PASSWORD'] = password
+app.config['MYSQL_DB'] = db
 app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
