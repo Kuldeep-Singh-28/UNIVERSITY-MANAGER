@@ -7,8 +7,7 @@ Rahul Kumar 190001049
 <hr>
 
 Visit any of two links for live demo. Frontend and Backend working.
-https://univ-mngr.herokuapp.com/
-https://krishdevtools.pythonanywhere.com 
+https://univ-mngr.herokuapp.com/ and https://krishdevtools.pythonanywhere.com 
 
 Clone this project  
 
