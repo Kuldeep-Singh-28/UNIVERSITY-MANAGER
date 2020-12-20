@@ -1,9 +1,22 @@
+#### This is Course project for CS-207. Build by group- G3 
+
+Kuldeep Singh 190001030  
+Krishanu Saini 190001029  
+Deepkamal Singh 190001011  
+Rahul Kumar 190001049  
+<hr>
+
+Visit any of two links for live demo. Frontend and Backend working.
+https://univ-mngr.herokuapp.com/
+https://krishdevtools.pythonanywhere.com 
+
 Clone this project  
-  
+
 ## Installing Requirements  
       1. Mysql (preferably use Mysql Workbench 8.0)  
-      
+
       2. Python 3.7 / 3.6 ( Not compatible with python 3.9 )  
+      2. Python 3.8 / 3.7 / 3.6 ( Not compatible with python 3.9 )  
  <br ><br ><br > 
         
 ## STEP 1  ( IMPORTING MYSQL DATABASE)
